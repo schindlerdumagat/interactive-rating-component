@@ -7,8 +7,58 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
+  
+  <link rel="preload" href="fonts/overpass-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/overpass-v19-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/overpass-v19-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles/style.css">
 
 <body>
+  <main>
+    <h1 class="visually-hidden">Sample Interactive Rating Component</h1>
+    <form class="form">
+      <div class="form__img-container">
+        <img class="form__img" src="images/icon-star.svg" alt="" width="17" height="16">
+      </div>
+      <fieldset class="form__fieldset">
+        <legend class="form__title">How did we do?</legend>
+        <p class="form__description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        <p class="form__error hidden" id="form-error" role="alert">Please select a rating!</p>
+        <ol class="form__ratings">
+          <li class="form__rate-item">
+            <label class="form__rate-number" for="rated-1">1</label>
+            <input class="form__rate-input visually-hidden" type="radio" name="rating" id="rated-1" value="1" aria-describedby="form-error">
+          </li>
+          <li class="form__rate-item">
+            <label class="form__rate-number" for="rated-2">2</label>
+            <input class="form__rate-input visually-hidden" type="radio" name="rating" id="rated-2" value="2">
+          </li>
+          <li class="form__rate-item">
+            <label class="form__rate-number" for="rated-3">3</label>
+            <input class="form__rate-input visually-hidden" type="radio" name="rating" id="rated-3" value="3">
+          </li>
+          <li class="form__rate-item">
+            <label class="form__rate-number" for="rated-4">4</label>
+            <input class="form__rate-input visually-hidden" type="radio" name="rating" id="rated-4" value="4">
+          </li>
+          <li class="form__rate-item">
+            <label class="form__rate-number" for="rated-5">5</label>
+            <input class="form__rate-input visually-hidden" type="radio" name="rating" id="rated-5" value="5">
+          </li>
+        </ol>
+      </fieldset>
+      <button class="form__submit" type="submit">Submit</button>
+    </form>
+  
+    <section class="confirm hidden" aria-hidden="true">
+      <img class="confirm__img" src="images/illustration-thank-you.svg" alt="" width="162" height="108">
+      <p class="confirm__rating-text">You selected <span class="confirm__rating"></span> out of 5</p>
+      <h2 class="confirm__title">Thank you!</h2>
+      <p class="confirm__description">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </section>
+  </main>
 
+  <script src="scripts/script.js"></script>
 </body>
 </html>
