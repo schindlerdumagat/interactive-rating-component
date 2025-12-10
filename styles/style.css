@@ -254,7 +254,7 @@ body {
   margin-block-end: clamp(var(--space-300), 1.0229rem + 2.0356vw, var(--space-400));
 }
 
-.confirm__rating-text {
+.confirm__rating {
   display: inline-block;
   color: var(--clr-orange-500);
   padding: 0.375rem var(--space-200);
