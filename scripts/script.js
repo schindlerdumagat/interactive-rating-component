@@ -30,7 +30,7 @@ function showConfirmation(rating) {
     hideRatingForm();
 
     // Shows the confirmation page with the selected rating.
-    rateContainer.textContent = rating;
+    rateContainer.textContent = `You selected ${rating} out of 5`;
     confirmation.classList.remove("hidden");
     confirmation.removeAttribute("aria-hidden");
 
